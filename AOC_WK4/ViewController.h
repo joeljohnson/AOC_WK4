@@ -9,5 +9,11 @@
 #import <UIKit/UIKit.h>
 
 @interface ViewController : UIViewController
+{
+    UITextField *usernameText;
+    UILabel *pleaseEnterLabel;
+    UILabel *creatorInfo;
+}
+- (void)onClick:(NSString*)showThis;
 
 @end
