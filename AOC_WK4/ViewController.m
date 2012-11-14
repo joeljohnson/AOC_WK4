@@ -60,7 +60,7 @@
     
 //Create a UIButton using the rounded rectangle type. Give this button any color you wish.
 //Add text "Show Date"
-// add action to call onClick add tag to specify button I
+// add action to call onClick add tag to specify button 
     UIButton *showDate = [UIButton buttonWithType:UIButtonTypeRoundedRect];
     if (showDate != nil)
     {
@@ -103,7 +103,8 @@
         {
             
             NSString *username = [usernameText text];
-            
+            //This could allow for spaces. Should probably use something like trimming whitespace on either end.
+            //for now this works
             if (username.length == 0)
             {
                 pleaseEnterLabel.text = @"Username cannot be empty";
@@ -121,7 +122,7 @@
                     [theFormatter setDateFormat:@"MMMM d, YYYY hh:mm:ss aaaa zzzz"];
                     NSString *myDate = [theFormatter stringFromDate:[NSDate date]];
             
-                    UIAlertView *showMessage = [[UIAlertView alloc]initWithTitle:@"Today's date is:" message:[NSString stringWithFormat:@"%@",myDate] delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+                    UIAlertView *showMessage = [[UIAlertView alloc]initWithTitle:@"Date:" message:[NSString stringWithFormat:@"%@",myDate] delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
                     if(showMessage != nil)
                     {
                         [showMessage show];
